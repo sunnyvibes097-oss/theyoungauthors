@@ -3,7 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Young Authors Project</title>
+<title>The Young Authors Project | Youth Authorship Program in Qatar</title>
+<meta name="description" content="The Young Authors Project empowers youth in Qatar to write, publish, and become authors through a structured six-stage, school-delivered framework in English and Arabic.">
+<meta name="keywords" content="Young Authors Project, Qatar youth authorship, student book publishing, writing program Qatar, young authors Doha">
+<link rel="canonical" href="https://theyoungauthors.github.io/">
+
+<!-- Open Graph / Social Preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Young Authors Project">
+<meta property="og:description" content="Empowering youth in Qatar to write, publish, and become authors through a structured, school-delivered framework.">
+<meta property="og:image" content="https://i.postimg.cc/Bvdp4Nx4/1111111.png">
+<meta property="og:url" content="https://theyoungauthors.github.io/">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Young Authors Project">
+<meta name="twitter:description" content="Empowering youth in Qatar to write, publish, and become authors.">
+<meta name="twitter:image" content="https://i.postimg.cc/Bvdp4Nx4/1111111.png">
+
+<link rel="icon" type="image/png" href="https://i.postimg.cc/KjK6yBJn/3D-young-authors-logo-transparent-background.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
@@ -189,35 +207,56 @@
 
   /* ---------- About ---------- */
   .about-grid{
-    display:grid; grid-template-columns:0.95fr 1.05fr; gap:clamp(36px,6vw,80px); align-items:center;
+    display:grid; grid-template-columns:1fr 1.08fr; gap:clamp(40px,7vw,96px); align-items:center;
   }
   .about-copy .h2{ margin-bottom:22px; max-width:14ch; }
   .about-copy .body-lg{ margin-bottom:0; }
-  
-  .placeholder-frame {
-    width: 100%;
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: 0 12px 32px rgba(42,35,32,0.12);
-    border: 1px solid var(--line);
-    background: var(--paper-light);
+  .about-copy .body-lg::first-letter{
+    font-family:'Playfair Display',serif;
+    font-weight:600;
+    font-size:3.6em;
+    line-height:0.78;
+    float:left;
+    padding:4px 10px 0 0;
+    color:var(--maroon);
   }
-  .placeholder-frame img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+  
+  .about-plate{ margin:0; }
+  .plate-frame{
+    padding:16px;
+    background:var(--paper-light);
+    border:1px solid var(--brass-light);
+    box-shadow:0 20px 48px rgba(42,35,32,0.14);
+  }
+  .plate-frame img{ display:block; width:100%; height:auto; }
+  .about-plate figcaption{
+    margin-top:16px;
+    font-family:'Playfair Display',serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:14px;
+    color:var(--ink-soft);
+    text-align:center;
+    letter-spacing:0.01em;
   }
 
   /* ---------- Program Section ---------- */
-  .mv-grid{ display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-bottom: 60px; }
-  .mv-card{
-    background:var(--paper-light); border:1px solid var(--line); border-radius:var(--radius);
-    padding:clamp(28px,3.4vw,42px); height:100%;
+  .mv-grid{
+    display:grid; grid-template-columns:1fr auto 1fr;
+    gap:clamp(32px,5vw,64px); align-items:start;
+    margin-bottom:clamp(56px,7vw,88px);
   }
-  .mv-card .icon-row{ display:flex; align-items:center; gap:12px; margin-bottom:18px; }
-  .mv-card .icon-row svg{ width:26px; height:26px; color:var(--maroon); }
-  .mv-card .h3{ margin-bottom:0; }
-  .mv-card p{ margin:16px 0 0; }
+  .mv-card{ padding:0; }
+  .mv-card .icon-row{ display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+  .mv-card .icon-row svg{ width:20px; height:20px; color:var(--brass); flex-shrink:0; }
+  .mv-card .icon-row .eyebrow{ margin:0; }
+  .mv-card .h3{ margin-bottom:14px; }
+  .mv-card p{ margin:0; }
+  .mv-divider{ width:1px; background:var(--brass-light); opacity:0.7; align-self:stretch; }
+  @media (max-width:760px){
+    .mv-grid{ grid-template-columns:1fr; gap:36px; }
+    .mv-divider{ width:100%; height:1px; }
+  }
 
   .fw-intro{ max-width:760px; margin-bottom:clamp(40px,5vw,60px); }
   
@@ -226,16 +265,29 @@
 .infographic-wrapper {
   width: 100%;
   max-width: 900px;
-  margin: 50px auto 70px;
-  background: transparent;
+  margin: clamp(40px,5vw,60px) auto 18px;
+  padding: 16px;
+  background: var(--paper-light);
+  border: 1px solid var(--brass-light);
+  box-shadow: 0 20px 48px rgba(42,35,32,0.12);
 }
 
 .infographic-img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: var(--radius);
   background: transparent;
+}
+
+.infographic-caption{
+  max-width:900px;
+  margin: 0 auto clamp(40px,5vw,60px);
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-weight:500;
+  font-size:14px;
+  color:var(--ink-soft);
+  text-align:center;
 }
 
   .delivery-grid{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(40px,6vw,80px); align-items:start; margin-bottom: 60px; }
@@ -251,18 +303,27 @@
   .fees-band{ background:var(--maroon); color:var(--paper-light); border-radius: var(--radius); padding: clamp(32px, 5vw, 56px); }
   .fees-band .eyebrow{ color:var(--brass-light); }
   .fees-band .h2{ color:var(--paper-light); margin-bottom:8px; }
-  .fees-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:32px; }
-  .fee-card{
-    border:1px solid rgba(244,238,223,0.28); border-radius:var(--radius);
-    padding:clamp(24px,3vw,32px);
+  .fees-grid{
+    display:grid; grid-template-columns:1fr 1fr;
+    margin-top:36px;
+    border-top:1px solid rgba(244,238,223,0.25);
   }
+  .fee-card{
+    padding:clamp(26px,3.4vw,38px) clamp(20px,3vw,32px) 4px;
+    border-right:1px solid rgba(244,238,223,0.25);
+  }
+  .fee-card:last-child{ border-right:none; }
   .fee-card .caption{ color:rgba(244,238,223,0.7); text-transform:uppercase; letter-spacing:0.12em; font-weight:700; font-size:12px; }
   .fee-amount{
     font-family:'Playfair Display',serif; font-weight:600; font-size:clamp(30px,3.2vw,40px);
     margin:14px 0 6px;
   }
   .fee-card .fee-note{ color:rgba(244,238,223,0.75); font-size:14.5px; margin:0; }
-  @media (max-width:700px){ .fees-grid{ grid-template-columns:1fr; } }
+  @media (max-width:700px){
+    .fees-grid{ grid-template-columns:1fr; }
+    .fee-card{ border-right:none; border-bottom:1px solid rgba(244,238,223,0.25); padding-bottom:24px; }
+    .fee-card:last-child{ border-bottom:none; }
+  }
 
   /* ---------- Register CTA ---------- */
   .register-band{
@@ -271,6 +332,9 @@
   }
   .register-band .h2{ max-width:20ch; margin:0 auto 16px; }
   .register-band .body-lg{ max-width:52ch; margin:0 auto 34px; }
+  .ornament{ display:flex; align-items:center; justify-content:center; gap:12px; margin:0 auto 22px; }
+  .ornament i{ width:36px; height:1px; background:var(--brass-light); display:block; }
+  .ornament span{ width:6px; height:6px; border-radius:50%; background:var(--brass); display:block; }
 
   .btn-primary {
     display: inline-block;
@@ -292,8 +356,9 @@
   .marquee{ display:flex; gap:16px; padding:22px 0; width:max-content; animation:scroll 32s linear infinite; }
   .marquee:hover{ animation-play-state:paused; }
   .strip-item{
-    width:150px; height:150px; flex-shrink:0; border-radius:var(--radius);
+    width:140px; height:140px; flex-shrink:0; border-radius:50%;
     overflow:hidden; background:var(--paper);
+    border:2px solid var(--brass-light);
     display:flex; align-items:center; justify-content:center;
   }
   .strip-item img{ width:100%; height:100%; object-fit:cover; display:block; }
@@ -401,9 +466,12 @@
       <p class="body-lg">A nation’s stories are shaped by its people. By encouraging young voices to write, reflect, and publish, Qatar invests in a generation capable of expressing its identity while engaging confidently with the wider world.</p>
       <p class="sub-tagline">Inspiring Authors. Preserving Heritage. Shaping the Future.</p>
     </div>
-    <div class="placeholder-frame">
-      <img src="https://i.postimg.cc/Bvdp4Nx4/1111111.png" alt="Published Student Book - The Young Authors Project">
-    </div>
+    <figure class="about-plate">
+      <div class="plate-frame">
+        <img src="https://i.postimg.cc/Bvdp4Nx4/1111111.png" alt="Published Student Book - The Young Authors Project">
+      </div>
+      <figcaption>A published work by a Young Author</figcaption>
+    </figure>
   </div>
 </section>
 <div class="stitch-divider"></div>
@@ -416,16 +484,19 @@
       <div class="mv-card">
         <div class="icon-row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-          <h3 class="h3">Mission</h3>
+          <p class="eyebrow">Mission</p>
         </div>
-        <p class="body">To advance human development by empowering youth through authorship, fostering critical thinking, creativity and cultural stewardship, and enabling every voice to contribute meaningfully to national identity and the shared story of humanity.</p>
+        <h3 class="h3">Empowering youth through authorship</h3>
+        <p class="body" style="margin-top:14px;">To advance human development by empowering youth through authorship, fostering critical thinking, creativity and cultural stewardship, and enabling every voice to contribute meaningfully to national identity and the shared story of humanity.</p>
       </div>
+      <div class="mv-divider"></div>
       <div class="mv-card">
         <div class="icon-row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-          <h3 class="h3">Vision</h3>
+          <p class="eyebrow">Vision</p>
         </div>
-        <p class="body">A world in which every generation is empowered through authorship is one that preserves its heritage, enriches its communities, and leaves a lasting legacy of knowledge, creativity, and understanding for generations to come.</p>
+        <h3 class="h3">A legacy carried forward</h3>
+        <p class="body" style="margin-top:14px;">A world in which every generation is empowered through authorship is one that preserves its heritage, enriches its communities, and leaves a lasting legacy of knowledge, creativity, and understanding for generations to come.</p>
       </div>
     </div>
 
@@ -439,6 +510,7 @@
     <div class="infographic-wrapper">
       <img src="https://i.imgur.com/QvI5Aa0.png" alt="Become a Young Author Framework" class="infographic-img">
     </div>
+    <p class="infographic-caption">The six progressive stages of The Young Authors Project Framework™</p>
 
     <div class="delivery-grid">
       <div class="delivery-copy">
@@ -478,6 +550,7 @@
 <!-- ================= REGISTER ================= -->
 <section class="register-band" id="register">
   <div class="wrap">
+    <div class="ornament"><i></i><span></span><i></i></div>
     <p class="eyebrow">Registration for the next cohort is now open</p>
     <h2 class="h2">Become a Published Author</h2>
     <p class="body-lg">Inspiring young minds to write today, so they can lead tomorrow.</p>
