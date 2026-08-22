@@ -86,7 +86,7 @@
 
   .sub-tagline {
     font-style: italic;
-    color: var(--brass);
+    color: var(--maroon);
     font-size: clamp(15px, 1.4vw, 17px);
     margin-top: 16px;
     font-weight: 500;
@@ -260,6 +260,7 @@
   .fee-amount{
     font-family:'Playfair Display',serif; font-weight:600; font-size:clamp(30px,3.2vw,40px);
     margin:14px 0 6px;
+    white-space:nowrap;
   }
   .fee-card .fee-note{ color:rgba(244,238,223,0.75); font-size:14.5px; margin:0; }
   @media (max-width:700px){ .fees-grid{ grid-template-columns:1fr; } }
@@ -396,9 +397,9 @@
 <section id="about">
   <div class="wrap about-grid">
     <div class="about-copy">
-      <p class="eyebrow">About the Project</p>
-      <h2 class="h2">Where young voices become lasting legacies</h2>
-      <p class="body-lg">A nation’s stories are shaped by its people. By encouraging young voices to write, reflect, and publish, Qatar invests in a generation capable of expressing its identity while engaging confidently with the wider world.</p>
+      <h2 class="h2" style="max-width:none;">Where young voices become lasting legacies</h2>
+      <p class="eyebrow" style="margin-top:14px;">About the Project</p>
+      <p class="body-lg">A nation's stories are shaped by its people. By encouraging young voices to write, reflect, and publish, Qatar invests in a generation capable of expressing its identity while engaging confidently with the wider world.</p>
       <p class="sub-tagline">Inspiring Authors. Preserving Heritage. Shaping the Future.</p>
     </div>
     <div class="placeholder-frame">
@@ -461,12 +462,12 @@
       <div class="fees-grid">
         <div class="fee-card">
           <p class="caption">Independent Students</p>
-          <p class="fee-amount">QR 1,000</p>
+          <p class="fee-amount">£195</p>
           <p class="fee-note">per student</p>
         </div>
         <div class="fee-card">
           <p class="caption">Group Enrolment (5–10 students)</p>
-          <p class="fee-amount">From QR 800</p>
+          <p class="fee-amount">£160</p>
           <p class="fee-note">per student</p>
         </div>
       </div>
